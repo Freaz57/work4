@@ -1,0 +1,72 @@
+
+ilya@ilya:~$ apt list nginx
+Вывод списка… Готово
+nginx/focal-updates,focal-updates,focal-security,focal-security 1.18.0-0ubuntu1.4 all
+N: Есть 1 дополнительная версия. Используйте «-a» для просмотра.
+
+ilya@ilya:~$ sudo apt install nginx
+
+ilya@ilya:/etc/nginx$ ll
+итого 80
+drwxr-xr-x   8 root root  4096 дек  4 16:36 ./
+drwxr-xr-x 142 root root 12288 дек  4 16:36 ../
+drwxr-xr-x   2 root root  4096 ноя 10  2022 conf.d/
+-rw-r--r--   1 root root  1077 фев  4  2019 fastcgi.conf
+-rw-r--r--   1 root root  1007 фев  4  2019 fastcgi_params
+-rw-r--r--   1 root root  2837 фев  4  2019 koi-utf
+-rw-r--r--   1 root root  2223 фев  4  2019 koi-win
+-rw-r--r--   1 root root  3957 фев  4  2019 mime.types
+drwxr-xr-x   2 root root  4096 ноя 10  2022 modules-available/
+drwxr-xr-x   2 root root  4096 дек  4 16:36 modules-enabled/
+-rw-r--r--   1 root root  1490 фев  4  2019 nginx.conf
+-rw-r--r--   1 root root   180 фев  4  2019 proxy_params
+-rw-r--r--   1 root root   636 фев  4  2019 scgi_params
+drwxr-xr-x   2 root root  4096 дек  4 16:36 sites-available/
+drwxr-xr-x   2 root root  4096 дек  4 16:36 sites-enabled/
+drwxr-xr-x   2 root root  4096 дек  4 16:36 snippets/
+-rw-r--r--   1 root root   664 фев  4  2019 uwsgi_params
+-rw-r--r--   1 root root  3071 фев  4  2019 win-utf
+ilya@ilya:/etc/nginx$
+
+ilya@ilya:~$ sudo dpkg -r nginx
+[sudo] пароль для ilya:
+(Чтение базы данных … на данный момент установлено 208706 файлов и каталогов.)
+Удаляется nginx (1.18.0-0ubuntu1.4) …
+
+ilya@ilya:~$ snap list
+Название             Версия                      Правка  Канал            Издатель           Примечание
+bare                 1.0                         5       latest/stable    canonical✓         base
+chromium-ffmpeg      0.1                         34      latest/stable    canonical✓         -
+code                 1a5daa3a                    146     latest/stable    vscode✓            classic
+core18               20230901                    2796    latest/stable    canonical✓         base
+core20               20230801                    2015    latest/stable    canonical✓         base
+core22               20230801                    864     latest/stable    canonical✓         base
+gnome-3-28-1804      3.28.0-19-g98f9e67.98f9e67  198     latest/stable    canonical✓         -
+gnome-3-38-2004      0+git.efb213a               143     latest/stable/…  canonical✓         -
+gnome-42-2204        0+git.ff35a85               141     latest/stable    canonical✓         -
+gtk-common-themes    0.1-81-g442e511             1535    latest/stable/…  canonical✓         -
+office365webdesktop  0.7.2                       5       latest/beta      rafgui012          -
+opera                105.0.4970.29               277     latest/stable    opera-software✓    -
+rubymine             2023.2.5                    387     latest/stable    jetbrains✓         classic
+snap-store           41.3-71-g709398e            959     latest/stable/…  canonical✓         -
+snapd                2.60.4                      20290   latest/stable    canonical✓         snapd
+telegram-desktop     4.11.8                      5248    latest/stable    telegram-desktop✓  -
+
+ilya@ilya:~$ sudo snap install google-docs
+google-docs 2022.12.1 от Tech Fiddle (comp-labs) установлен
+
+
+ilya@ilya:nano test.txt
+ilya@ilya: crontab -e
+ilya@ilya: crontab -l
+
+ */10 * * * * cat /home/db/shared/test.txt > /home/db/sharee/test.txt.bak
+итого 2736
+drwxr-xr-x 50 ilya ilya   4096 дек  4 16:44  ./
+drwxr-xr-x  3 root root   4096 сен 23 12:21  ../
+-rw-rw-r--  1 ilya ilya 28512 дек 4 21:12 logs.txt
+-rw-rw-r--  1 ilya ilya     97 дек  3 16:44  test.txt
+-rw-rw-r--  1 db db   114 дек 12 21:13 test.txt.bak
+
+
+
